@@ -1,0 +1,22 @@
+.venue-card {
+    width: 100%;
+    height: 100%;
+    
+    aspect-ratio: 1;
+    border-radius: 10px;
+    
+}
+
+/* .venue-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+.venue-title {
+    position: relative;
+    left: 5%;
+    bottom: -81%;
+    max-width: 90%;
+    color: white;
+}
