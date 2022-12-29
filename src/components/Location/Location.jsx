@@ -1,17 +1,19 @@
 
+import { Link } from 'react-router-dom'
 import './Location.css'
 
-function Location({ id, cover, title }) {
 
+function Location(props) {
     return (
-        <div className="venue-card" key={id}
+
+        <div className="venue-card" key={props.id}
             style={{
-                background: `linear-gradient( rgba(0, 0, 0, 10%), rgba(0, 0, 0, 10%) ), url(${cover})`,
+                background: `linear-gradient( rgba(0, 0, 0, 10%), rgba(0, 0, 0, 10%) ), url(${props.cover})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
             }}>
             {/* <img className="venue-cover" src={cover} alt="logement" /> */}
-            <p className='venue-title'>{title}</p>
+            <Link className='venue-title' relative='path' to={`/LocationPage/${props.id}`}>{props.title}</Link>
         </div>
     )
 }

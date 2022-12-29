@@ -1,0 +1,15 @@
+.kasa-cover-section{
+    color: white;
+    background: linear-gradient( rgba(0, 0, 0, 20%), rgba(0, 0, 0, 20%) ),url(../../assets/cover.jpg);
+    height: 223px;
+    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 500;
+    border-radius: 25px;
+}

@@ -8,12 +8,13 @@ function LocationList() {
     return (
         <div className='kasa-venue-list-bgd'>
             <div className='kasa-venue-list'>
-                {data.map(({ id, title, cover }) =>
+                {data.map((props) =>
 
-                    <div className='card-container' key={id}>
+                    <div className='card-container' key={props.id}>
                         <Location
-                            cover={cover}
-                            title={title}
+                            id={props.id}
+                            cover={props.cover}
+                            title={props.title}
                         />
                     </div>)}
             </div>

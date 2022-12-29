@@ -1,12 +1,10 @@
 import './App.css';
-import LocationList from '../Locations/LocationsList'
-import Header from '../header/Header';
+import Home from '../../Pages/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <LocationList />
+      <Home/>
     </div>
   );
 }
