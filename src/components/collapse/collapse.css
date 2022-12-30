@@ -1,0 +1,19 @@
+.collapse {
+    color: white;
+    background: #FF6060;
+    width: auto;
+    margin-bottom: 20px;
+    margin-top: 5%;
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.bouton-collapse{
+    border: none;
+    background: none;
+
+}
+  

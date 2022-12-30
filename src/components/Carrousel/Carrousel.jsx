@@ -15,7 +15,7 @@ export default function Carrousel(props) {
     const prev = () => {
         setSlide(slide === 0 ? length - 1 : slide - 1);
     }
-
+    console.log(props)
     return (
         <div className='carrousel'>
             {props.slides.map((picture, index) => {
@@ -31,16 +31,16 @@ export default function Carrousel(props) {
             }
             )}
             {length > 1 ? (
-        <>
-          <div className="carrousel__previous" onClick={prev}>
-            <img src={chevronleft} alt="" className="slider__previous-icon" />
-          </div>
-          <div className="carrousel__next" onClick={next}>
-            <img src={chevronright} alt="" className="slider__next-icon" />
-          </div>
-        </>
-      ) : null}
-
+                <>
+                    <div className="carrousel__previous" onClick={prev}>
+                        <img src={chevronleft} alt="" className="slider__previous-icon" />
+                    </div>
+                    <div className="carrousel__next" onClick={next}>
+                        <img src={chevronright} alt="" className="slider__next-icon" />
+                    </div>
+                </>
+            ) : null}
+            <div className='carrousel__counter'>{slide +1 }/{length}</div>
         </div>
     )
 }
