@@ -1,0 +1,16 @@
+.tags{
+    color: white;
+    background: #FF6060;
+    border-radius: 10px;
+    font-family: montserrat;
+    margin-right: 10px;
+    width: 25%;
+    height: 25px;
+    font-size: 14px;
+    line-height: 0px;
+}
+
+.tags-single{
+    padding-left: 3%;
+    padding-right: 3%;
+}

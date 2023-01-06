@@ -1,0 +1,44 @@
+.collapse {
+    width: 45%;
+}
+
+.collapse button {
+    width: 100%;
+    text-align: start;
+    color: white;
+    background: #FF6060;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    padding-left: 6%;
+}
+
+.collapse-content {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: #f7f7f7;
+    color: #FF6060;
+    border-radius: 10px;
+    height: 250px;
+}
+
+.collapse-content-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 142.6%;
+    list-style-type: none;
+    padding: 6%;
+    padding-top: 9%;
+    margin-top: -2%;
+}

@@ -5,30 +5,32 @@ import Carrousel from '../../components/Caroussel/Carrousel'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Host from '../../components/Host/Host'
-// import Collapse from '../../components/collapse/collapse'
+import Tags from '../../components/Tags/Tags'
+import Stars from '../../components/Stars/Stars'
+import Collapse from '../../components/Collapse/Collapse'
 
 
 
 function LocationPage() {
 
-    const [venue, setVenue] = useState({ title: '', description: '', location: '', tags: [], equipments: [], pictures: [], ratings: '', host: { 'name': '', 'picture': '' } });
+    const [venue, setVenue] = useState({ title: '', description: '', location: '', tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } });
 
     let { id } = useParams()
 
-    useEffect (function (){
+    useEffect(function () {
         fetch('/locations.json')
-        .then((response) => {
-            return response.json()
-        })
-        .then((data) => {
-            for (let i=0; i<data.length; i++){
-                if (data[i].id === id){
-                    setVenue(data[i])
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].id === id) {
+                        setVenue(data[i])
+                    }
                 }
-            }
-        })
-    },[]);
-    
+            })
+    }, []);
+    console.log(venue.tags)
     return (
         <div className='location-page-wrapper'>
             <Header />
@@ -36,12 +38,26 @@ function LocationPage() {
                 <Carrousel
                     slides={venue.pictures} />
             </div>
-            <Host 
-            title={venue.title}
-            location={venue.location}
-            nom={venue.host}
+            <Host
+                title={venue.title}
+                location={venue.location}
+                nom={venue.host}
             />
-            {/* <Collapse title={'Description'}/> */}
+            <div className='tags-stars'>
+                <div className="main-container-tag">
+                    {venue.tags.map((tag) =>
+
+                        <Tags content={tag} key={tag} />
+                    )}
+                </div>
+                <Stars rating={venue.rating}/>
+            </div>
+            <div className='collapses-container'>
+                <Collapse title="Description" content={venue.description}/>
+                <Collapse title="Equipements" content={venue.equipments}/>
+
+            </div>
+            
         </div>
     )
 }

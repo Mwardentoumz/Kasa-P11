@@ -8,3 +8,21 @@
 .location-host{
     display: flex;
 }
+
+.main-container-tag{
+    
+    display: flex;
+    width: 50%;
+}
+.tags-stars{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapses-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
