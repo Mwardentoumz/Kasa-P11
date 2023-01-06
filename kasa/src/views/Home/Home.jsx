@@ -2,7 +2,8 @@ import Header from '../../components/Header/Header.jsx'
 import Banner from '../../components/Banner/Banner.jsx'
 import LocationList from '../../components/List/List.jsx'
 import './Home.css'
-// import LocationList from '../../components/Locations/LocationsList'
+import Footer from '../../components/Footer/Footer.jsx'
+
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
                 <Header />
                 <Banner />
                 <LocationList />
+                <Footer/>
             </div>
         </div>
     )

@@ -1,6 +1,11 @@
 .collapse {
-    width: 45%;
+    width: 75%;
+    margin-bottom: 2%;
 }
+
+.collapse + .collapse {
+    margin-left: 40px;
+  }
 
 .collapse button {
     width: 100%;
@@ -28,7 +33,7 @@
     background-color: #f7f7f7;
     color: #FF6060;
     border-radius: 10px;
-    height: 250px;
+    max-height: 250px
 }
 
 .collapse-content-text {

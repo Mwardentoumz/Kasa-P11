@@ -1,0 +1,14 @@
+.Footer-wrapper{
+    background: black;
+    height: 210px;
+    margin-top: 2%;
+}
+.Footer-wrapper img{
+    color: white;
+    margin-top: 5%;
+}
+
+.Footer-wrapper p{
+    color: white;
+    
+}

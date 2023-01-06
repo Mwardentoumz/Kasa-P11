@@ -8,6 +8,7 @@ import Host from '../../components/Host/Host'
 import Tags from '../../components/Tags/Tags'
 import Stars from '../../components/Stars/Stars'
 import Collapse from '../../components/Collapse/Collapse'
+import Footer from '../../components/Footer/Footer'
 
 
 
@@ -50,14 +51,13 @@ function LocationPage() {
                         <Tags content={tag} key={tag} />
                     )}
                 </div>
-                <Stars rating={venue.rating}/>
+                <Stars rating={venue.rating} />
             </div>
             <div className='collapses-container'>
-                <Collapse title="Description" content={venue.description}/>
-                <Collapse title="Equipements" content={venue.equipments}/>
-
+                <Collapse title="Description" content={venue.description} />
+                <Collapse title="Equipements" content={venue.equipments} />
             </div>
-            
+            <Footer/>
         </div>
     )
 }
