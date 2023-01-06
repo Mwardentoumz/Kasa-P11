@@ -1,0 +1,55 @@
+.location-host {
+    display: flex;
+    color: #FF6060;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-family: montserrat;
+    max-height: 77px;
+    margin-top: 30px;
+}
+
+.host-name-picture {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14%;
+}
+
+.host{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    width: 93px;
+    text-align: right;
+    
+
+}
+.host-picture {
+    border-radius: 50%;
+    max-height: 64px;
+    aspect-ratio: 1;
+}
+
+.location-host h1{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    /* line-height: 51px; */
+    /* letter-spacing: 0em; */
+    text-align: left;
+    margin: 0;
+}
+.location-host h2{
+    font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+
+}

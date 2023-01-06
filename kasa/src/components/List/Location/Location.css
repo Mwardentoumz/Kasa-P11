@@ -1,0 +1,19 @@
+.venue-card {
+    width: 100%;
+    height: 100%;
+    
+    aspect-ratio: 1;
+    border-radius: 10px;
+    
+}
+
+.venue-title {
+    position: relative;
+    bottom: -81%;
+    color: white;
+    text-decoration: none;
+    float: left;
+    left: 5%;
+    text-align: left;
+    max-width: 55%;
+}

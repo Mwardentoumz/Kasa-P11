@@ -1,0 +1,10 @@
+.location-page-wrapper{
+    text-align: center;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.location-host{
+    display: flex;
+}
