@@ -1,8 +1,8 @@
 .location-page-wrapper{
     text-align: center;
     width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .location-host{
@@ -25,4 +25,25 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+}
+
+@media(max-width:400px){
+    .carrousel-wrapper{
+        height: 226px;
+    }
+    .tags-stars{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 60px;
+    margin-top: -17px;
+    }
+    .main-container-tag{
+        width: 100%;
+    }
+    .collapses-container{
+        display: flex;
+        flex-direction: column;
+    }
 }

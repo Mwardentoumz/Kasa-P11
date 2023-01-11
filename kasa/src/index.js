@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LocationPage from './views/LocationPage/LocationPage';
 import About from './views/About/About';
+import NotFound from './views/NotFound/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/LocationPage/:id" element={<LocationPage/>}/>  
+        <Route path='*' element={<NotFound />}/>
       </Routes>
     </BrowserRouter>
 

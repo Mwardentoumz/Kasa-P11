@@ -1,4 +1,4 @@
-.header{
+.header {
     margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
@@ -9,12 +9,37 @@
     list-style: none;
 }
 
-.nav-kasa{
+.nav-kasa {
     display: flex;
     justify-content: space-between;
     width: 20%;
 }
-.nav-kasa a{
+
+.nav-kasa a {
     text-decoration: none;
     color: #FF6060;
+}
+
+@media (max-width : 400px) {
+    .header img {
+        height: 57px;
+        width: 145px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+
+    }
+
+    .nav-kasa {
+        display: flex;
+        justify-content: space-between;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: right;
+        width: 35%;
+
+    }
 }

@@ -1,16 +1,16 @@
 .carrousel {
-    position: relative;
-    max-height: 415px;
-  }
-  
-  .carrousel__active-picture {
-    max-height: 415px;
-    width: 100%;
-    transform: scale(1);
-    transition: transform 300ms;
-  }
-  
-  /* @include media-query(small) {
+  position: relative;
+  max-height: 415px;
+}
+
+.carrousel__active-picture {
+  max-height: 415px;
+  width: 100%;
+  transform: scale(1);
+  transition: transform 300ms;
+}
+
+/* @include media-query(small) {
           height: 295px;
         }
         @include media-query(medium) {
@@ -22,19 +22,19 @@
         @include media-query(xlarge) {
           height: 415px;
         } */
-  .carrousel__inactive-picture {
-    transform: scale(1.05);
-    transition: transform 300ms;
-  }
-  
-  .carrousel__picture {
-    width: inherit;
-    max-height: 415px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* @include media-query(small) {
+.carrousel__inactive-picture {
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+.carrousel__picture {
+  width: inherit;
+  max-height: 415px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* @include media-query(small) {
           border-radius: 15px;
         }
         @include media-query(medium) {
@@ -43,34 +43,62 @@
         @include media-query(large) {
           border-radius: 25px;
         } */
-  
-  
+
+
+.carrousel__previous {
+  position: relative;
+  top: -240px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 20px;
+}
+
+.carrousel__next {
+  position: relative;
+  top: -320px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: 20px;
+  justify-content: flex-end;
+}
+
+.carrousel__counter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -210px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width:400px) {
   .carrousel__previous {
-    position: relative;
-    top: -240px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    left:20px;
+    top: -135px;
   }
-  
+  .carrousel__previous img {
+    height: 20px;
+    width: 12px;
+  }
   .carrousel__next {
-    position: relative;
-    top: -320px;
+    top: -155px;
+  }
+  .carrousel__next img{
+    height: 20px;
+    width: 12px;
+  }
+  .carrousel__counter{
+    top: -80px;
+  }
+  .carrousel__picture{
     height: 100%;
-    display: flex;
-    align-items: center;
-    right: 20px;
-    justify-content: flex-end;
+    width: inherit;
+    max-height: 255px;
+    object-fit: cover;
+    border-radius: 10px;
   }
-  
-  .carrousel__counter {
-    position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: -210px;
-      color: white;
-      font-size: 18px;
-      font-weight: 500;
-  }
+
+}

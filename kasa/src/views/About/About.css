@@ -12,3 +12,11 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+@media(max-width:400px){
+    .about{
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;}
+}
