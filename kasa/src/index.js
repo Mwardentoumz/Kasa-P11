@@ -16,7 +16,6 @@ root.render(
       <Route path='*' element={<NotFound />}/>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
-        <Route path="/LocationPage/*" exact element={<NotFound/>} />  
         <Route exact path="/LocationPage/:id" element={<LocationPage/>} />  
         
         

@@ -12,11 +12,16 @@ import Footer from '../../components/Footer/Footer'
 
 
 
+
+
 function LocationPage() {
 
+    const { id } = useParams();
     const [venue, setVenue] = useState({ title: '', description: '', location: '', tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } });
+    const [error, setError] = useState(null)
+    
 
-    let { id } = useParams()
+    
 
     useEffect(function () {
         fetch('/locations.json')
@@ -24,18 +29,22 @@ function LocationPage() {
                 return response.json()
             })
             .then((data) => {
-
-                for (let i = 0; i < data.length; i++) {
-
-                    if (data[i].id === id) {
-                        setVenue(data[i])
-                    }
-                }
+                setVenue(data.find((venue) => venue.id === id))
             })
-    }, []);
+            .catch((error) => {
+                setError(error)
+            })
+    }, [id]);
 
+    console.log(venue)
+    
+    if (error) {
+        return <div>Sorry, there was an error.</div>;
+    }
 
-
+    if (!venue) {
+        return <Navigate to="/*" replace={true} />
+    }
 
     return (
         <div className='location-page-wrapper'>
