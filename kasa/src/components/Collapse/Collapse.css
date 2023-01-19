@@ -8,6 +8,7 @@
   }
 
 .collapse button {
+    display: flex;
     width: 100%;
     text-align: start;
     color: white;
@@ -21,6 +22,9 @@
     font-size: 18px;
     line-height: 142.6%;
     padding-left: 6%;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-right: 4%;
 }
 
 .collapse-content {
@@ -58,6 +62,10 @@
     .collapse button{
         font-size:13px;
         height: 30px;
+    }
+    .collapse img{
+        width: 15px;
+        height: 9px;
     }
     .collapse-content-text{
         font-size: 12px;

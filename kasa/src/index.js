@@ -13,11 +13,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+      <Route path='*' element={<NotFound />}/>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
-        <Route path="/LocationPage/:id" element={<LocationPage/>}/>  
-        <Route path='*' element={<NotFound />}/>
-      </Routes>
+        <Route path="/LocationPage/*" exact element={<NotFound/>} />  
+        <Route exact path="/LocationPage/:id" element={<LocationPage/>} />  
+        
+        
+        </Routes>
     </BrowserRouter>
 
   </React.StrictMode>

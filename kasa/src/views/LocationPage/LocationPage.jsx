@@ -2,7 +2,7 @@ import React from 'react'
 import './LocationPage.css'
 import Header from '../../components/Header/Header'
 import Carrousel from '../../components/Caroussel/Carrousel'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Host from '../../components/Host/Host'
 import Tags from '../../components/Tags/Tags'
@@ -24,14 +24,19 @@ function LocationPage() {
                 return response.json()
             })
             .then((data) => {
+
                 for (let i = 0; i < data.length; i++) {
+
                     if (data[i].id === id) {
                         setVenue(data[i])
                     }
                 }
             })
     }, []);
-    console.log(venue.tags)
+
+
+
+
     return (
         <div className='location-page-wrapper'>
             <Header />
@@ -57,7 +62,7 @@ function LocationPage() {
                 <Collapse title="Description" content={venue.description} />
                 <Collapse title="Equipements" content={venue.equipments} />
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
